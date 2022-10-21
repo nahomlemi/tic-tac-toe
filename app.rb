@@ -64,9 +64,31 @@ class Game < Player
     @@winner = false
     @@round = 0
     def check_for_win()
+        res = [1,3,5]
         if round == '9'
             print  "Game Over! DRAW!"
-        elsif @@b1[1],b2
+        elsif for i in res
+            if @@b1[i] =='x';@@b2[i]=='x',@@b3[i] == 'x'
+                puts "Game Over! Player X have WON!"
+            elsif @@b1[i] =='o';@@b2[i]=='o',@@b3[i] == 'o'
+                puts "Game Over! Player O have WON!"
+
+            elsif @@b1[1] == 'o';@@b1[3]=='o';@@b1[5]=='o';
+                puts "Game Over! Player O have WON!"
+            elsif @@b2[1] == 'o';@@b2[3]=='o';@@b2[5]=='o';
+                puts "Game Over! Player O have WON!"
+            elsif @@b3[1] == 'o';@@b3[3]=='o';@@b3[5]=='o';
+                puts "Game Over! Player O have WON!"
+
+            elsif @@b1[1] == 'x';@@b1[3]=='x';@@b1[5]=='x';
+                puts "Game Over! Player X have WON!"
+            elsif @@b2[1] == 'x';@@b2[3]=='x';@@b2[5]=='x';
+                puts "Game Over! Player X have WON!"
+            elsif @@b3[1] == 'x';@@b3[3]=='x';@@b3[5]=='x';
+                puts "Game Over! Player X have WON!"
+
+
+            end
         end
     end
     def start_game()
